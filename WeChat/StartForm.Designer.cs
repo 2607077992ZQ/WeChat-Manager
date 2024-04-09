@@ -29,31 +29,67 @@ namespace WeChat
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.多开数量ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.设置锁定密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.启动ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.锁定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(984, 621);
+            this.panel1.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 25);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(984, 596);
+            this.tabControl1.TabIndex = 4;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.启动ToolStripMenuItem,
+            this.锁定ToolStripMenuItem,
+            this.清除ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(834, 25);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Size = new System.Drawing.Size(984, 25);
+            this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
-            this.多开数量ToolStripMenuItem});
+            this.多开数量ToolStripMenuItem,
+            this.设置锁定密码ToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 21);
             this.toolStripMenuItem1.Text = "设置";
@@ -61,7 +97,7 @@ namespace WeChat
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(148, 22);
             this.toolStripMenuItem2.Text = "路径设置";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -71,7 +107,7 @@ namespace WeChat
             this.toolStripMenuItem3,
             this.toolStripComboBox1});
             this.多开数量ToolStripMenuItem.Name = "多开数量ToolStripMenuItem";
-            this.多开数量ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.多开数量ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.多开数量ToolStripMenuItem.Text = "多开数量";
             // 
             // toolStripMenuItem3
@@ -98,47 +134,108 @@ namespace WeChat
             this.toolStripComboBox1.Text = "1";
             this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
             // 
-            // tabControl1
+            // 设置锁定密码ToolStripMenuItem
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 25);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(834, 486);
-            this.tabControl1.TabIndex = 2;
+            this.设置锁定密码ToolStripMenuItem.Name = "设置锁定密码ToolStripMenuItem";
+            this.设置锁定密码ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.设置锁定密码ToolStripMenuItem.Text = "设置锁定密码";
+            this.设置锁定密码ToolStripMenuItem.Click += new System.EventHandler(this.设置锁定密码ToolStripMenuItem_Click);
+            // 
+            // 启动ToolStripMenuItem
+            // 
+            this.启动ToolStripMenuItem.Name = "启动ToolStripMenuItem";
+            this.启动ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.启动ToolStripMenuItem.Text = "启动";
+            this.启动ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // 锁定ToolStripMenuItem
+            // 
+            this.锁定ToolStripMenuItem.Name = "锁定ToolStripMenuItem";
+            this.锁定ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.锁定ToolStripMenuItem.Text = "锁定";
+            this.锁定ToolStripMenuItem.Click += new System.EventHandler(this.锁定ToolStripMenuItem_Click);
+            // 
+            // 清除ToolStripMenuItem
+            // 
+            this.清除ToolStripMenuItem.Name = "清除ToolStripMenuItem";
+            this.清除ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.清除ToolStripMenuItem.Text = "清除";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "微信多开管理器";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem4});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(100, 22);
+            this.toolStripMenuItem5.Text = "锁定";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.锁定ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(100, 22);
+            this.toolStripMenuItem4.Text = "退出";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(834, 511);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(984, 621);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("宋体", 12F);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "微信多开管理器";
+            this.MinimumSizeChanged += new System.EventHandler(this.StartForm_MinimumSizeChanged);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StartForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.StartForm_SizeChanged);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem 多开数量ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripMenuItem 启动ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 锁定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 清除ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 设置锁定密码ToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        public System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
